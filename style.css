@@ -1,0 +1,210 @@
+:root {
+    --color-primary-000: #fafafa88;
+    --color-primary-100: #fafafa;
+    --color-primary-200: #f2f2f2;
+    --color-primary-300: #eaeaea;
+    --color-secondary-100: #171717;
+    --color-accent-100: #0075ff;
+
+    --canvas-resolution: 16;
+    --canvas-color: #ffffff;
+    --pencil-color: #000000;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+menu {
+    list-style: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+body {
+    padding: 0 0.6rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--color-secondary-100);
+    background-color: var(--color-primary-100);
+}
+
+.hidden {
+    position: fixed;
+    width: 0;
+    opacity: 0;
+}
+
+.button:focus-visible,
+.resolution-range:focus-visible,
+.hidden:focus-visible + label {
+    outline-offset: 0.15em;
+    outline: 0.1em dashed var(--color-accent-100);
+}
+
+.button,
+.toggler-label {
+    padding: 0.2em 1em;
+    display: inline-block;
+    text-align: center;
+    color: var(--color-secondary-100);
+    background-color: var(--color-primary-200);
+    border-radius: 0.5em;
+    border: 0.1em solid var(--color-primary-300);
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        border-color: var(--color-accent-100);
+    }
+}
+
+.toggler {
+    + .toggler-label {
+        background-color: var(--color-primary-100);
+        border: 0.1em dashed var(--color-primary-300);
+
+        &:hover {
+            border-color: var(--color-accent-100);
+        }
+    }
+
+    &:checked + .toggler-label {
+        color: var(--color-primary-100);
+        background-color: var(--color-accent-100);
+        border-color: var(--color-accent-100);
+    }
+}
+
+.resolution-range {
+    width: 100%;
+    border-radius: 0.5em;
+    transition: all 0.2s ease;
+    z-index: 1;
+}
+
+.resolution-range-label {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--color-accent-100);
+    background-color: var(--color-primary-000);
+    backdrop-filter: blur(3px);
+    scale: 0;
+    opacity: 0;
+    user-select: none;
+    transition: all 200ms ease;
+
+    &.active {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.toolbar {
+    padding: 0.5rem 0;
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    &.top {
+        top: 0;
+        z-index: 1;
+    }
+
+    &.bottom {
+        bottom: 0;
+    }
+}
+
+.toolbar-item {
+    display: flex;
+
+    &:has(input[type='range']) {
+        flex: 1 0 100%;
+    }
+
+    .button,
+    .toggler-label {
+        min-width: 7rem;
+    }
+}
+
+.toolbar-divider {
+    height: 1.5rem;
+    width: 0.1rem;
+    background-color: var(--color-accent-100);
+    border-radius: 0.5em;
+}
+
+.canvas-color-label {
+    border-color: var(--pencil-color);
+    background-color: var(--canvas-color);
+    color: var(--pencil-color);
+}
+
+.pencil-color-label {
+    border-color: var(--canvas-color);
+    background-color: var(--pencil-color);
+    color: var(--canvas-color);
+}
+
+.canvas {
+    width: min(90vh, 90vw);
+    height: min(90vh, 90vw);
+    display: grid;
+    grid-template-columns: repeat(var(--canvas-resolution), 1fr);
+    grid-template-rows: repeat(var(--canvas-resolution), 1fr);
+    place-content: center;
+    background-color: var(--color-primary-300);
+    border: var(--border);
+}
+
+.canvas-cell {
+    background-color: var(--canvas-color);
+    cursor: crosshair;
+    user-select: none;
+    aspect-ratio: 1;
+}
+
+@media (width < 1000px) {
+    .toolbar-item {
+        flex: 1 0 0;
+
+        .button,
+        .toggler-label {
+            width: 100%;
+        }
+
+        &:has(label[for$='-color']) {
+            flex: 1 0 calc(50% - 0.5rem);
+        }
+    }
+
+    .toolbar-divider {
+        display: none;
+    }
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <title>Etch a Sketch</title>
+    </head>
+    <body>
+        <menu class="toolbar top">
+            <li class="toolbar-item">
+                <input class="resolution-range" id="canvas-resolution" type="range" value="16" min="8" max="100" />
+                <label class="resolution-range-label" for="canvas-resolution">16x16</label>
+            </li>
+            <li class="toolbar-item">
+                <input class="toggler hidden" id="canvas-lines-visible" type="checkbox" />
+                <label class="toggler-label" for="canvas-lines-visible">Lines</label>
+            </li>
+            <li class="toolbar-item">
+                <button class="button" id="canvas-reset" type="button">Reset</button>
+            </li>
+        </menu>
+
+        <div class="canvas" id="canvas">
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+            <div class="canvas-cell"></div>
+        </div>
+
+        <menu class="toolbar bottom">
+            <li class="toolbar-item">
+                <input class="hidden" id="canvas-color" type="color" value="#ffffff" />
+                <label class="canvas-color-label button" for="canvas-color">Canvas</label>
+            </li>
+            <li class="toolbar-item">
+                <input class="hidden" id="pencil-color" type="color" value="#000000" />
+                <label class="pencil-color-label button" for="pencil-color">Pencil</label>
+            </li>
+
+            <div class="toolbar-divider"></div>
+
+            <li class="toolbar-item">
+                <input class="toggler hidden" id="fill" name="canvas-tools" type="radio" />
+                <label class="toggler-label" for="fill">Fill</label>
+            </li>
+            <li class="toolbar-item">
+                <input class="toggler hidden" id="rainbow" name="canvas-tools" type="radio" />
+                <label class="toggler-label" for="rainbow">Rainbow</label>
+            </li>
+            <li class="toolbar-item">
+                <input class="toggler hidden" id="darken" name="canvas-tools" type="radio" />
+                <label class="toggler-label" for="darken">Darken</label>
+            </li>
+            <li class="toolbar-item">
+                <input class="toggler hidden" id="lighten" name="canvas-tools" type="radio" />
+                <label class="toggler-label" for="lighten">Lighten</label>
+            </li>
+            <li class="toolbar-item">
+                <input class="toggler hidden" id="eraser" name="canvas-tools" type="radio" />
+                <label class="toggler-label" for="eraser">Eraser</label>
+            </li>
+            <li class="toolbar-item">
+                <input class="toggler hidden" id="pencil" name="canvas-tools" type="radio" checked />
+                <label class="toggler-label" for="pencil">Pencil</label>
+            </li>
+        </menu>
+    </body>
+</html>
